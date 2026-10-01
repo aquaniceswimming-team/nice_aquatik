@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aquanice – Les Renang</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+<style>
+:root{--bg:#fff;--ink:#0a2a6b;--mut:#4b5f87;--sky:#12a8ea;--soft:#eaf6fd;--line:#cfe3f2;--btn:#0a2a6b;--btnt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#071733;--ink:#e8f3ff;--mut:#9db4d6;--soft:#0d2350;--line:#1c3a73;--btn:#12a8ea;--btnt:#04172f}}
+:root[data-theme="dark"]{--bg:#071733;--ink:#e8f3ff;--mut:#9db4d6;--soft:#0d2350;--line:#1c3a73;--btn:#12a8ea;--btnt:#04172f}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+header img{height:48px;width:auto;display:block}
+nav{display:flex;gap:18px;font-weight:600;font-size:15px}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--btn);color:var(--btnt);padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.hero{padding:48px 0 56px;background:linear-gradient(180deg,var(--soft),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,66px);font-weight:800}
+.hero p{color:var(--mut);max-width:46ch;margin:16px 0 26px;font-size:19px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.hero .logo{width:100%;max-width:380px;justify-self:center;display:block;margin:0 auto}
+section{padding:56px 0;scroll-margin-top:64px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--mut);margin:0 0 28px;max-width:60ch}
+.team{width:100%;border-radius:20px;display:block;margin-bottom:28px;max-height:520px;object-fit:cover;object-position:top}
+.coaches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.coach{text-align:center;position:relative}
+.coach img,.coach .ph{width:100%;aspect-ratio:1/1.1;object-fit:cover;border-radius:16px;background:var(--soft);display:grid;place-items:center;font-size:40px;color:var(--mut)}
+.coach b{display:block;margin-top:10px;font-family:'Bricolage Grotesque',sans-serif;font-size:18px}
+.coach span{color:var(--mut);font-size:14px}
+.rules{columns:2 280px;column-gap:32px;padding-left:20px;margin:0}
+.rules li{margin-bottom:8px}
+footer{padding:28px 0;color:var(--mut);font-size:14px;text-align:center}
+@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .logo{order:-1;max-width:240px}nav{display:none}}
+.progs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.pc{border:1.5px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.pc.sp{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pc h3{font-size:22px}.pc p{margin:0;color:var(--mut);font-size:15px}.pc.sp p{color:inherit;opacity:.85}
+.tag{font-size:12px;font-weight:700;background:var(--soft);color:var(--ink);border-radius:999px;padding:3px 10px;width:max-content}
+.pk{display:flex;justify-content:space-between;gap:8px;border-top:1px dashed var(--line);padding-top:8px;font-weight:600}
+.pc.sp .pk{border-color:#ffffff55}.pk small{font-weight:400;opacity:.8;display:block;text-align:right}
+.pk span:last-child{text-align:right}
+.pc .btn{margin-top:auto;text-align:center}.pc.sp .btn{background:var(--bg);color:var(--ink)}
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.doc img,.doc .ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;background:var(--soft);display:grid;place-items:center;font-size:34px;color:var(--mut)}
+.doc p{margin:8px 2px 0;font-size:15px;color:var(--mut)}
+.ct{white-space:pre-line;max-width:70ch;margin:0}
+.cimg{width:100%;border-radius:20px;margin-top:20px;max-height:520px;object-fit:cover;display:block}
+form.reg{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--soft);border-radius:24px;padding:28px}
+form.reg label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
+form.reg .full{grid-column:1/-1}
+form.reg input,form.reg select{padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.info{color:var(--mut);font-size:14px;margin-top:14px}
+@media(max-width:720px){form.reg{grid-template-columns:1fr}}
+#adm{background:none;border:0;color:var(--mut);font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;margin-top:8px}
+
+/* panel admin */
+body.adm{padding-bottom:76px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--ink);color:var(--bg);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+.bar .btn{padding:8px 18px;background:var(--bg);color:var(--ink)}
+.bar .btn.go{background:var(--sky);color:#04172f}
+.bar #msg{flex:1 1 220px;font-size:14px;text-align:center}
+.bar #msg[data-k="err"]{color:#ffb4ab;font-weight:600}
+.ap{position:fixed;top:env(safe-area-inset-top,0px);right:0;bottom:0;width:min(440px,100vw);z-index:8;background:var(--bg);color:var(--ink);border-left:1.5px solid var(--line);box-shadow:-8px 0 30px #0003;display:none;flex-direction:column;font-size:15px;line-height:1.4}
+body.pn .ap{display:flex}
+@media(min-width:900px){body.pn{padding-right:440px}}
+.aph{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.aph b{font-family:'Bricolage Grotesque',sans-serif;font-size:20px}
+#apin{display:flex;flex-direction:column;flex:1;min-height:0}
+.apt{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-bottom:1px solid var(--line);flex:0 0 auto}
+.apt button{flex:0 0 auto;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.apt button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.apb{overflow:auto;padding:16px 16px 110px;flex:1}
+.f{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;font-size:13px;font-weight:600}
+.f input,.f textarea{padding:9px 11px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-weight:400;font-size:15px;width:100%}
+.f input[type=color]{padding:2px;height:40px;cursor:pointer}
+.f.ck{flex-direction:row;align-items:center;gap:8px}.f.ck input{width:auto}
+.it{border:1.5px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--bg)}
+.it>summary{padding:10px 14px;font-weight:700;cursor:pointer}
+.itb{padding:4px 14px 12px}
+.tb{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.ab{display:inline-block;border:1.5px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.ab.x{color:#c62828;border-color:#c6282855}
+.ab.sky{background:var(--sky);color:#04172f;border-color:var(--sky)}
+.h4{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin:16px 0 8px}
+.pr{display:grid;grid-template-columns:1.2fr 1fr .9fr auto;gap:6px;align-items:end;margin-bottom:6px}
+.pr .f{margin-bottom:0}
+.pr2{display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:end;margin-bottom:6px}
+.pr2 .f{margin-bottom:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ir{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ir img{width:64px;height:64px;object-fit:cover;border-radius:10px;background:var(--soft)}
+.ir i{font-size:13px;color:var(--mut);font-weight:400}
+.hint{font-size:13px;color:var(--mut);font-weight:400;margin:4px 0 12px}
+.err{color:#c62828;font-size:14px;min-height:20px;margin:6px 0}
+.md{position:fixed;inset:0;z-index:20;background:#000a;display:grid;place-items:center;padding:20px}
+.mdb{background:var(--bg);color:var(--ink);border-radius:20px;padding:24px;width:min(380px,100%)}
+.mdb h3{margin-bottom:6px;font-size:26px}
+.mdb p{margin:0 0 14px;color:var(--mut);font-size:14px}
+.mdb input{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.mdb .acts{display:flex;gap:10px;margin-top:6px}
+.mdb .btn{padding:10px 20px}
+</style>
+<style id="themeCss"></style>
+</head>
+<body>
+<div id="app"></div>
+<div id="admroot"></div>
+<div id="mdroot"></div>
+<script>
+(()=>{
+'use strict';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+
+/* ---------- SHA-256 (murni JS, dipakai untuk hash password) ---------- */
+const K=[];for(let n=2,c=0;c<64;n++){let p=1;for(let i=2;i*i<=n;i++)if(n%i===0){p=0;break}if(p)K[c++]=Math.floor((Math.cbrt(n)%1)*4294967296)|0}
+function sha256(m){
+ const l=m.length,n=(l+9+63)&~63,b=new Uint8Array(n);b.set(m);b[l]=128;
+ const dv=new DataView(b.buffer);dv.setUint32(n-8,Math.floor(l/536870912));dv.setUint32(n-4,(l<<3)>>>0);
+ const h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Int32Array(64);
+ for(let o=0;o<n;o+=64){
+  for(let i=0;i<16;i++)w[i]=dv.getInt32(o+i*4);
+  for(let i=16;i<64;i++){const x=w[i-15],y=w[i-2];w[i]=(w[i-16]+(((x>>>7)|(x<<25))^((x>>>18)|(x<<14))^(x>>>3))+w[i-7]+(((y>>>17)|(y<<15))^((y>>>19)|(y<<13))^(y>>>10)))|0}
+  let a=h[0],b2=h[1],c=h[2],d=h[3],e=h[4],f=h[5],g=h[6],hh=h[7];
+  for(let i=0;i<64;i++){
+   const t1=(hh+(((e>>>6)|(e<<26))^((e>>>11)|(e<<21))^((e>>>25)|(e<<7)))+((e&f)^(~e&g))+K[i]+w[i])|0;
+   const t2=((((a>>>2)|(a<<30))^((a>>>13)|(a<<19))^((a>>>22)|(a<<10)))+((a&b2)^(a&c)^(b2&c)))|0;
+   hh=g;g=f;f=e;e=(d+t1)|0;d=c;c=b2;b2=a;a=(t1+t2)|0}
+  h[0]=(h[0]+a)|0;h[1]=(h[1]+b2)|0;h[2]=(h[2]+c)|0;h[3]=(h[3]+d)|0;h[4]=(h[4]+e)|0;h[5]=(h[5]+f)|0;h[6]=(h[6]+g)|0;h[7]=(h[7]+hh)|0}
+ const out=new Uint8Array(32),ov=new DataView(out.buffer);h.forEach((v,i)=>ov.setUint32(i*4,v>>>0));return out}
+const hex=u=>[...u].map(x=>x.toString(16).padStart(2,'0')).join('');
+function hashPw(pw,salt){const e=new TextEncoder().encode(salt+':'+pw);let d=sha256(e);for(let i=0;i<9999;i++){const t=new Uint8Array(d.length+e.length);t.set(d);t.set(e,d.length);d=sha256(t)}return hex(d)}
+window.__aqTest={sha256,hashPw,hex};
+
+/* ---------- data ---------- */
+const DEFTHEME={ink:'#0a2a6b',sky:'#12a8ea',soft:'#eaf6fd'};
+const DEF=()=>({v:2,title:'Aquanice – Les Renang',footer:'© Aquanice Les Renang',logo:'',team:'',
+ hero:{title:'Belajar renang yang aman dan menyenangkan.',text:'',cta1:'Daftar lewat WhatsApp',cta2:'Lihat program'},
+ theme:{...DEFTHEME},
+ order:[{id:'program',on:true,nav:'Program',title:'Program Aquanice',sub:'',soft:false},{id:'coach',on:true,nav:'Coach',title:'Coach Aquanice',sub:'',soft:true},{id:'docs',on:true,nav:'Dokumentasi',title:'Dokumentasi',sub:'',soft:true},{id:'rules',on:true,nav:'Aturan',title:'Aturan singkat',sub:'',soft:false},{id:'daftar',on:true,nav:'Daftar',title:'Daftar sekarang',sub:'',soft:false}],
+ programs:[],coaches:[],docs:[],rules:[],waNumber:'',contactText:'',addr:'',
+ reg:{button:'Daftar via WhatsApp',msg:'Halo, saya ingin mendaftar.'},admin:{salt:'',hash:''},updated:'',github:{owner:'',repo:'',branch:'main'}});
+function fill(x){const d=DEF();for(const k in d){if(x[k]===undefined||x[k]===null)x[k]=d[k];else if(d[k]&&typeof d[k]==='object'&&!Array.isArray(d[k]))x[k]=Object.assign(d[k],x[k])}
+ x.programs.forEach(p=>{p.packages=p.packages||[];p.extras=p.extras||[]});return x}
+let S=DEF();
+const G=p=>p.split('.').reduce((o,k)=>o==null?o:o[k],S);
+const setPath=(p,v)=>{const a=p.split('.'),l=a.pop();a.reduce((o,k)=>o[k],S)[l]=v};
+const cc=c=>/^#[0-9a-f]{6}$/i.test(c)?c:'#000000';
+const wa=()=>{const d=String(S.waNumber||'').replace(/\D/g,'');return d.startsWith('0')?'62'+d.slice(1):d};
+const money=n=>(n===null||n===''||n===undefined||isNaN(n))?'':'Rp'+Number(n).toLocaleString('id-ID');
+const pkgText=k=>k.label+(money(k.price)?' – '+money(k.price):'')+(k.unit?' ('+k.unit+')':'');
+const app=$('#app');
+
+/* ---------- situs publik ---------- */
+const secWrap=(it,inner)=>`<section id="${esc(it.id)}"${it.soft?' style="background:var(--soft)"':''}><div class="wrap">${it.title?`<h2>${esc(it.title)}</h2>`:''}${it.sub?`<p class="sub">${esc(it.sub)}</p>`:''}${inner}</div></section>`;
+function secProgram(){const dOn=S.order.some(s=>s.on&&s.id==='daftar'),wl=wa()?`https://wa.me/${wa()}`:'#';
+ return `<div class="progs">${S.programs.map((p,i)=>`<div class="pc ${p.special?'sp':''}"><h3>${esc(p.name)}</h3>${p.tag?`<span class="tag">${esc(p.tag)}</span>`:''}${p.description?`<p>${esc(p.description)}</p>`:''}${p.packages.map(k=>`<div class="pk"><span>${esc(k.label)}</span><span>${esc(money(k.price))}${k.unit?`<small>${esc(k.unit)}</small>`:''}</span></div>`).join('')}${p.extras.map(x=>`<div class="pk"><span>${esc(x.label)}</span><span>${esc(x.value)}</span></div>`).join('')}${p.note?`<p>${esc(p.note)}</p>`:''}${p.cta?`<a class="btn" href="${dOn?'#daftar':wl}" data-pick="${i}">${esc(p.cta)}</a>`:''}</div>`).join('')}</div>`}
+function secCoach(){return (S.team?`<img class="team" src="${S.team}" alt="Tim coach">`:'')+`<div class="coaches">${S.coaches.map(c=>`<div class="coach">${c.img?`<img src="${c.img}" alt="${esc(c.name)}">`:'<div class="ph">👤</div>'}<b>${esc(c.name)}</b><span>${esc(c.role)}</span></div>`).join('')}</div>`}
+function secDocs(){return `<div class="docs">${S.docs.map(d=>`<div class="doc">${d.img?`<img src="${d.img}" alt="${esc(d.caption)}">`:'<div class="ph">📷</div>'}${d.caption?`<p>${esc(d.caption)}</p>`:''}</div>`).join('')}</div>`}
+function secRules(){return `<ul class="rules">${S.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`}
+function secCustom(it){return (it.text?`<p class="ct">${esc(it.text)}</p>`:'')+(it.img?`<img class="cimg" src="${it.img}" alt="">`:'')}
+function secDaftar(){const info=[S.addr,S.contactText].filter(Boolean).map(esc).join(' · ');
+ return `<form class="reg" onsubmit="return false"><label>Nama<input id="r-nama" placeholder="Nama peserta" autocomplete="name"></label><label>Usia<input id="r-usia" type="number" min="1" max="99" placeholder="Usia (tahun)"></label><label class="full">Nomor WhatsApp<input id="r-wa" type="tel" placeholder="08xxxxxxxxxx" autocomplete="tel"></label>
+<label>Pilihan Program<select id="r-prog"><option value="">Pilih program</option>${S.programs.map((p,i)=>`<option value="${i}">${esc(p.regLabel||p.name)}</option>`).join('')}</select></label><label>Paket yang Dipilih<select id="r-pkg"><option value="">Pilih program dulu</option></select></label>
+<div class="full"><button type="button" class="btn" id="wasend">${esc(S.reg.button)}</button><p class="info" id="rerr"></p></div></form>${info?`<p class="info">${info}</p>`:''}`}
+const SECF={program:secProgram,coach:secCoach,docs:secDocs,rules:secRules,daftar:secDaftar};
+const secHtml=it=>secWrap(it,(SECF[it.id]||secCustom)(it));
+function renderSite(){
+ const on=S.order.filter(s=>s.on),w=wa(),link=w?`https://wa.me/${w}`:'',first=on.some(s=>s.id==='program')?'#program':(on[0]?'#'+on[0].id:'#');
+ document.title=S.title||'Aquanice';
+ $('#themeCss').textContent=`:root{--ink:${cc(S.theme.ink)};--sky:${cc(S.theme.sky)};--soft:${cc(S.theme.soft)};--btn:${cc(S.theme.ink)}}`;
+ const y=window.scrollY;app.style.minHeight=app.offsetHeight+'px';
+ app.innerHTML=`<header><div class="wrap"><a href="#">${S.logo?`<img src="${S.logo}" alt="Logo">`:''}</a><nav>${on.map(s=>`<a href="#${esc(s.id)}">${esc(s.nav||s.title)}</a>`).join('')}</nav></div></header>
+<main><div class="hero"><div class="wrap"><div><h1>${esc(S.hero.title)}</h1>${S.hero.text?`<p>${esc(S.hero.text)}</p>`:''}<div class="acts">${link&&S.hero.cta1?`<a class="btn" href="${link}">${esc(S.hero.cta1)}</a>`:''}${S.hero.cta2?`<a class="btn ${link&&S.hero.cta1?'ghost':''}" href="${first}">${esc(S.hero.cta2)}</a>`:''}</div></div>${S.logo?`<div><img class="logo" src="${S.logo}" alt=""></div>`:''}</div></div>
+${on.map(secHtml).join('')}</main>
+<footer>${esc(S.footer)}<br><button id="adm">Admin</button></footer>`;
+ window.scrollTo({top:y,behavior:'instant'});setTimeout(()=>{app.style.minHeight=''},900)}
+function fillPkg(i){const sel=$('#r-pkg');if(!sel)return;const p=S.programs[+i],l=(i===''||!p)?[]:p.packages.map(pkgText);
+ sel.innerHTML=l.length?l.map(x=>`<option>${esc(x)}</option>`).join(''):`<option value="">${i===''?'Pilih program dulu':'(tanpa paket)'}</option>`}
+document.addEventListener('change',e=>{if(e.target.id==='r-prog')fillPkg(e.target.value)});
+document.addEventListener('click',e=>{
+ const t=e.target.closest('[data-pick],#wasend,#adm');if(!t)return;
+ if(t.id==='adm'){openLogin();return}
+ if(t.dataset.pick!==undefined){setTimeout(()=>{const p=$('#r-prog');if(p){p.value=t.dataset.pick;fillPkg(p.value)}},0);return}
+ const v=id=>$('#'+id).value.trim(),er=$('#rerr'),pi=v('r-prog'),p=S.programs[+pi];
+ if(!v('r-nama')||!v('r-usia')||!v('r-wa')||pi===''||(p&&p.packages.length&&!v('r-pkg'))){er.textContent='Mohon lengkapi semua kolom.';return}
+ if(!wa()){er.textContent='Nomor WhatsApp tujuan belum diatur.';return}er.textContent='';
+ const L=[S.reg.msg||'Halo, saya ingin mendaftar.','',`Nama: ${v('r-nama')}`,`Usia: ${v('r-usia')} tahun`,`Nomor WhatsApp: ${v('r-wa')}`,`Program: ${p.regLabel||p.name}`];
+ if(v('r-pkg'))L.push(`Paket: ${v('r-pkg')}`);
+ window.open(`https://wa.me/${wa()}?text=${encodeURIComponent(L.join('\n'))}`,'_blank')});
+
+/* ---------- login admin ---------- */
+let admin=false,dirty=false,busy=false,tab='umum',rt=null,fails=0,lock=0;
+const OPEN=new Set();
+function openLogin(){
+ if(admin){document.body.classList.add('pn');return}
+ $('#mdroot').innerHTML=`<div class="md" id="mdbg"><div class="mdb"><h3>Login Admin</h3><p>Masukkan password untuk mengubah isi halaman.</p><input type="password" id="pw" autocomplete="current-password" placeholder="Password"><div class="err" id="pwe"></div><div class="acts"><button class="btn" id="pwgo">Masuk</button><button class="btn ghost" id="pwx">Batal</button></div></div></div>`;
+ setTimeout(()=>{const i=$('#pw');if(i)i.focus()},50)}
+const closeLogin=()=>{$('#mdroot').innerHTML=''};
+async function attempt(){
+ const er=$('#pwe'),inp=$('#pw');if(!er||!inp)return;
+ if(Date.now()<lock){er.textContent='Terlalu banyak percobaan. Tunggu 30 detik.';return}
+ er.textContent='Memeriksa…';await new Promise(r=>setTimeout(r,30));
+ if(S.admin.hash&&hashPw(inp.value,S.admin.salt)===S.admin.hash){fails=0;closeLogin();try{sessionStorage.setItem('aq_admin',S.admin.hash)}catch(_){}enterAdmin()}
+ else{fails++;if(fails>=5){lock=Date.now()+30000;fails=0}inp.value='';er.textContent='Password salah.'}}
+document.addEventListener('click',e=>{const i=e.target.id;if(i==='pwgo')attempt();if(i==='pwx'||i==='mdbg')closeLogin()});
+document.addEventListener('keydown',e=>{if(e.target.id==='pw'&&e.key==='Enter'){e.preventDefault();attempt()}if(e.key==='Escape')closeLogin()});
+
+/* ---------- panel admin ---------- */
+const TABS=[['umum','Umum'],['program','Program'],['coach','Coach'],['docs','Dokumentasi'],['rules','Aturan'],['halaman','Halaman'],['tampilan','Tampilan'],['github','GitHub'],['aman','Keamanan']];
+const T={programs:()=>({name:'Program baru',tag:'',description:'',regLabel:'',special:false,packages:[{label:'1 pertemuan',price:null,unit:''}],extras:[],note:'',cta:'Daftar Sekarang'}),
+ packages:()=>({label:'',price:null,unit:''}),extras:()=>({label:'',value:''}),coaches:()=>({img:'',name:'Nama coach',role:'Coach'}),docs:()=>({img:'',caption:''}),
+ order:()=>({id:'c'+Date.now().toString(36),on:true,custom:true,nav:'Info',title:'Judul bagian',sub:'',text:'',img:'',soft:false})};
+const fT=(p,l,o={})=>`<label class="f"><span>${l}</span><input data-p="${p}"${o.n?' data-n="1" type="number" min="0" step="1000" inputmode="numeric"':''}${o.sum?' data-sum="1"':''}${o.ph?` placeholder="${esc(o.ph)}"`:''} value="${esc(G(p))}"></label>`;
+const fA=(p,l,r=3)=>`<label class="f"><span>${l}</span><textarea data-p="${p}" rows="${r}">${esc(G(p))}</textarea></label>`;
+const fC=(p,l)=>`<label class="f ck"><input type="checkbox" data-p="${p}"${G(p)?' checked':''}><span>${l}</span></label>`;
+const fK=(p,l)=>`<label class="f"><span>${l}</span><input type="color" data-p="${p}" value="${cc(G(p))}"></label>`;
+const fI=(p,l)=>{const v=G(p);return `<div class="f"><span>${l}</span><div class="ir">${v?`<img src="${v}" alt="">`:'<i>Belum ada foto</i>'}<label class="ab sky">${v?'Ganti foto':'Pilih foto'}<input type="file" accept="image/*" data-img="${p}" hidden></label>${v?`<button class="ab x" data-act="clr" data-p="${p}">Hapus</button>`:''}</div></div>`};
+const bt=(l,txt,x='')=>`<button class="ab ${x}" data-act="add" data-l="${l}">${txt}</button>`;
+const tb=(l,i,del=true)=>`<div class="tb"><button class="ab" data-act="mv" data-l="${l}" data-i="${i}" data-d="-1">↑ Naik</button><button class="ab" data-act="mv" data-l="${l}" data-i="${i}" data-d="1">↓ Turun</button>${del?`<button class="ab x" data-act="del" data-l="${l}" data-i="${i}">Hapus</button>`:''}</div>`;
+const det=(k,sum,body)=>`<details class="it" data-k="${k}"${OPEN.has(k)?' open':''}><summary>${esc(sum)||'(tanpa nama)'}</summary><div class="itb">${body}</div></details>`;
+
+function tabUmum(){return `<div class="h4">Halaman utama</div>${fT('title','Judul tab browser')}${fT('hero.title','Judul besar')}${fA('hero.text','Teks pengantar',3)}<div class="row">${fT('hero.cta1','Teks tombol WhatsApp')}${fT('hero.cta2','Teks tombol kedua')}</div>${fI('logo','Logo')}
+<div class="h4">Kontak</div>${fT('waNumber','Nomor WhatsApp tujuan pendaftaran',{ph:'0858xxxxxxx'})}${fT('contactText','Teks kontak yang ditampilkan',{ph:'0858xxxx (nama) & @instagram'})}${fT('addr','Alamat / lokasi kolam')}
+<div class="h4">Formulir pendaftaran</div>${fT('reg.button','Teks tombol kirim')}${fA('reg.msg','Kalimat pembuka pesan WhatsApp',2)}
+<div class="h4">Footer</div>${fT('footer','Teks footer')}`}
+function tabProgram(){return `<p class="hint">Pilihan di formulir pendaftaran otomatis mengikuti daftar program ini.</p>`+S.programs.map((p,i)=>{const b='programs.'+i;
+ return det('p'+i,p.name,`${fT(b+'.name','Nama program',{sum:1})}${fT(b+'.tag','Label kecil (mis. batas usia)',{ph:'Di bawah 17 tahun'})}${fA(b+'.description','Deskripsi',2)}${fT(b+'.regLabel','Nama di formulir pendaftaran',{ph:p.name})}${fC(b+'.special','Kartu sorot (warna gelap)')}
+<div class="h4">Paket &amp; harga</div>${p.packages.map((k,j)=>`<div class="pr">${fT(b+'.packages.'+j+'.label','Paket')}${fT(b+'.packages.'+j+'.price','Harga (Rp)',{n:1})}${fT(b+'.packages.'+j+'.unit','Satuan')}<button class="ab x" data-act="del" data-l="${b}.packages" data-i="${j}" title="Hapus paket">✕</button></div>`).join('')}${bt(b+'.packages','+ Paket')}
+<div class="h4">Baris info tambahan</div>${p.extras.map((x,j)=>`<div class="pr2">${fT(b+'.extras.'+j+'.label','Keterangan')}${fT(b+'.extras.'+j+'.value','Nilai')}<button class="ab x" data-act="del" data-l="${b}.extras" data-i="${j}" title="Hapus baris">✕</button></div>`).join('')}${bt(b+'.extras','+ Baris info')}
+${fA(b+'.note','Catatan di kartu',2)}${fT(b+'.cta','Teks tombol (kosongkan untuk menyembunyikan)')}${tb('programs',i)}`)}).join('')+bt('programs','+ Tambah program','sky')}
+function tabCoach(){return fI('team','Foto tim')+S.coaches.map((c,i)=>det('c'+i,c.name,`${fI('coaches.'+i+'.img','Foto')}${fT('coaches.'+i+'.name','Nama',{sum:1})}${fT('coaches.'+i+'.role','Peran')}${tb('coaches',i)}`)).join('')+`<div class="tb"><label class="ab sky">+ Tambah coach (pilih foto)<input type="file" accept="image/*" data-addimg="coaches" hidden></label>${bt('coaches','+ Tanpa foto')}</div>`}
+function tabDocs(){return S.docs.map((d,i)=>`<div class="it"><div class="itb">${fI('docs.'+i+'.img','Foto')}${fT('docs.'+i+'.caption','Keterangan foto')}${tb('docs',i)}</div></div>`).join('')+`<div class="tb"><label class="ab sky">+ Tambah foto (bisa pilih banyak)<input type="file" accept="image/*" multiple data-addimg="docs" hidden></label></div>`}
+function tabRules(){return `<label class="f"><span>Aturan (satu aturan per baris)</span><textarea data-p="rules" data-lines="1" rows="12">${esc(S.rules.join('\n'))}</textarea></label>`}
+function tabHalaman(){return `<p class="hint">Atur urutan, tampilkan atau sembunyikan, dan ganti judul tiap bagian. Bagian baru berisi teks dan foto.</p>`+S.order.map((s,i)=>{const b='order.'+i;
+ return det('s'+i,(s.title||s.nav)+(s.on?'':' (disembunyikan)'),`${fC(b+'.on','Tampilkan bagian ini')}${fT(b+'.title','Judul bagian')}${fA(b+'.sub','Teks di bawah judul',2)}${fT(b+'.nav','Nama di menu atas')}${fC(b+'.soft','Latar biru muda')}${s.custom?fA(b+'.text','Isi teks',6)+fI(b+'.img','Foto (opsional)'):''}${tb('order',i,!!s.custom)}`)}).join('')+bt('order','+ Tambah bagian baru','sky')}
+function tabTampilan(){return `${fK('theme.ink','Warna utama (judul &amp; tombol)')}${fK('theme.sky','Warna aksen')}${fK('theme.soft','Warna latar lembut')}<button class="ab" data-act="reset">Kembalikan warna awal</button><p class="hint">Mode gelap mengikuti pengaturan perangkat pengunjung.</p>`}
+function tabAman(){return `<div class="h4">Ganti password admin</div><label class="f"><span>Password saat ini</span><input type="password" id="pw0" autocomplete="current-password"></label><label class="f"><span>Password baru (minimal 8 karakter)</span><input type="password" id="pw1" autocomplete="new-password"></label><label class="f"><span>Ulangi password baru</span><input type="password" id="pw2" autocomplete="new-password"></label><div class="err" id="pwerr"></div><button class="ab sky" data-act="chpw">Ganti password</button>
+<p class="hint">Password disimpan sebagai hash, bukan teks asli. Perubahan baru berlaku untuk semua setelah “Terbitkan perubahan”. Untuk keamanan, gunakan password yang panjang dan unik.</p>`}
+const TABF={umum:tabUmum,program:tabProgram,coach:tabCoach,docs:tabDocs,rules:tabRules,halaman:tabHalaman,tampilan:tabTampilan,github:tabGithub,aman:tabAman};
+function renderPanel(){const el=$('#apin');if(!el)return;const o=$('#apb'),sc=o?o.scrollTop:0;
+ el.innerHTML=`<div class="apt">${TABS.map(([k,l])=>`<button class="${k===tab?'on':''}" data-act="tab" data-t="${k}">${l}</button>`).join('')}</div><div class="apb" id="apb">${TABF[tab]()}</div>`;$('#apb').scrollTop=sc}
+const lastPub=()=>{if(!S.updated)return '';const d=new Date(S.updated);return isNaN(d)?'':' Terakhir diterbitkan: '+d.toLocaleString('id-ID',{dateStyle:'medium',timeStyle:'short'})+'.'};
+function stat(msg,kind){const m=$('#msg');if(!m)return;m.textContent=msg||(dirty?'Ada perubahan yang belum diterbitkan.':'Semua perubahan sudah tayang.'+lastPub());m.dataset.k=kind||''}
+function changed(){dirty=true;stat();clearTimeout(rt);renderSite()}
+function typed(){if(!dirty){dirty=true;stat()}clearTimeout(rt);rt=setTimeout(renderSite,450)}
+function enterAdmin(){admin=true;document.body.classList.add('adm','pn');
+ $('#admroot').innerHTML=`<div class="ap"><div class="aph"><b>Panel Admin</b><button class="ab" data-act="panel">Tutup ✕</button></div><div id="apin"></div></div><div class="bar"><button class="btn" data-act="panel">Panel</button><span id="msg"></span><button class="btn go" data-act="pub">Terbitkan perubahan</button><button class="btn" data-act="out">Keluar</button></div>`;
+ renderPanel();stat();syncLatest()}
+function shrink(file,max,type){return new Promise((res,rej)=>{const im=new Image(),u=URL.createObjectURL(file);im.onload=()=>{const r=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*r);c.height=Math.round(im.height*r);const x=c.getContext('2d');if(type==='image/jpeg'){x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height)}x.drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);res(c.toDataURL(type,.85))};im.onerror=rej;im.src=u})}
+const imgOpt=p=>p==='logo'?[700,'image/png']:p==='coaches'||/^coaches\./.test(p)?[900,'image/jpeg']:[1100,'image/jpeg'];
+const rnd=()=>'aq-'+Array.from({length:8},()=>Math.floor(Math.random()*256).toString(16).padStart(2,'0')).join('');
+document.addEventListener('input',e=>{const t=e.target,p=t.dataset.p;if(!p||!admin)return;
+ let v=t.type==='checkbox'?t.checked:t.value;
+ if(t.dataset.n!==undefined)v=v===''?null:Number(v);
+ if(t.dataset.lines!==undefined)v=String(v).split('\n').map(s=>s.trim()).filter(Boolean);
+ setPath(p,v);
+ if(t.dataset.sum){const s=t.closest('details');if(s)s.querySelector('summary').textContent=t.value||'(tanpa nama)'}
+ if(t.type==='checkbox')changed();else typed()});
+document.addEventListener('toggle',e=>{const k=e.target.dataset&&e.target.dataset.k;if(k){e.target.open?OPEN.add(k):OPEN.delete(k)}},true);
+document.addEventListener('change',async e=>{const t=e.target;if(!admin)return;
+ if(t.dataset.img){const f=t.files[0];if(!f)return;const[m,ty]=imgOpt(t.dataset.img);
+  try{setPath(t.dataset.img,await shrink(f,m,ty));changed();renderPanel()}catch(_){stat('Foto tidak bisa dibuka. Coba file JPG atau PNG lain.','err')}}
+ else if(t.dataset.addimg){const k=t.dataset.addimg,fs=[...t.files],list=G(k);
+  for(const f of fs){try{const u=await shrink(f,k==='coaches'?900:1100,'image/jpeg');list.push(k==='coaches'?{img:u,name:'Nama coach',role:'Coach'}:{img:u,caption:''})}catch(_){stat('Ada foto yang tidak bisa dibuka.','err')}}
+  changed();renderPanel()}});
+async function changePw(){const o=$('#pw0').value,n=$('#pw1').value,n2=$('#pw2').value,er=$('#pwerr');
+ if(hashPw(o,S.admin.salt)!==S.admin.hash){er.textContent='Password saat ini salah.';return}
+ if(n.length<8){er.textContent='Password baru minimal 8 karakter.';return}
+ if(n!==n2){er.textContent='Ulangi password baru dengan sama persis.';return}
+ const salt=rnd();S.admin={salt,hash:hashPw(n,salt)};changed();renderPanel();stat('Password diganti. Klik “Terbitkan perubahan” agar berlaku.')}
+/* ---------- GitHub: simpan perubahan sebagai commit ---------- */
+const GH_KEY='aq_gh_token',UP=new Map();
+const tok=()=>{try{return localStorage.getItem(GH_KEY)||''}catch(_){return ''}};
+function ghCfg(){const g=S.github||{};let o=(g.owner||'').trim(),r=(g.repo||'').trim();
+ if((!o||!r)&&/\.github\.io$/.test(location.hostname)){o=o||location.hostname.split('.')[0];r=r||(location.pathname.split('/')[1]||location.hostname)}
+ return {o,r,b:(g.branch||'main').trim()||'main'}}
+async function gh(method,path,body,raw){
+ const c=ghCfg(),res=await fetch(`https://api.github.com/repos/${encodeURIComponent(c.o)}/${encodeURIComponent(c.r)}${path?'/'+path:''}`,{method,cache:'no-store',headers:{'Authorization':'Bearer '+tok(),'Accept':raw?'application/vnd.github.raw+json':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});
+ if(!res.ok){const e=new Error('http');e.status=res.status;try{e.detail=(await res.json()).message}catch(_){}throw e}
+ return raw?res.text():res.json()}
+const ghErr=e=>!e||e.status===undefined?'Tidak bisa menghubungi GitHub. Periksa koneksi internet.':
+ e.status===401?'Token ditolak atau sudah kedaluwarsa. Buat token baru di GitHub.':
+ e.status===403?'Token tidak punya izin menulis (butuh Contents: Read and write) atau akses dibatasi.':
+ e.status===404?'Repositori atau branch tidak ditemukan, atau token tidak punya akses ke repositori ini.':
+ e.status===409||e.status===422?'Ada perubahan lain di GitHub. Muat ulang halaman lalu ulangi perubahan.':
+ 'GitHub menolak permintaan (kode '+e.status+').';
+const isData=v=>typeof v==='string'&&v.startsWith('data:image/');
+const ext=d=>({'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[d.slice(5,d.indexOf(';'))]||'jpg');
+function serialize(){
+ const files=[],tmp=new Map();let n=0;
+ const conv=(v,nm)=>{if(!isData(v))return v;if(UP.has(v))return UP.get(v);if(tmp.has(v))return tmp.get(v);
+  const p=`images/${nm}-${Date.now().toString(36)}${n++}.${ext(v)}`;tmp.set(v,p);files.push({path:p,b64:v.slice(v.indexOf(',')+1)});return p};
+ const o=JSON.parse(JSON.stringify(S));
+ o.logo=conv(S.logo,'logo');o.team=conv(S.team,'team');
+ o.coaches.forEach((c,i)=>{c.img=conv(S.coaches[i].img,'coach')});
+ o.docs.forEach((d,i)=>{d.img=conv(S.docs[i].img,'doc')});
+ o.order.forEach((s,i)=>{if(s.img)s.img=conv(S.order[i].img,'bagian')});
+ const keep=new Set([o.logo,o.team,...o.coaches.map(c=>c.img),...o.docs.map(d=>d.img),...o.order.map(s=>s.img)].filter(x=>x&&x.startsWith('images/')));
+ return {data:o,files,tmp,keep}}
+async function doPublish(){
+ if(busy)return;
+ const c=ghCfg();
+ if(!c.o||!c.r){tab='github';renderPanel();stat('Isi pemilik dan nama repositori di tab GitHub.','err');return}
+ if(!tok()){tab='github';renderPanel();stat('Simpan token GitHub dulu di tab GitHub.','err');return}
+ busy=true;stat('Menyimpan ke GitHub…');const prev=S.updated;
+ try{
+  S.updated=new Date().toISOString();
+  const {data,files,tmp,keep}=serialize();
+  const head=(await gh('GET',`git/ref/heads/${encodeURIComponent(c.b)}`)).object.sha;
+  const base=(await gh('GET',`git/commits/${head}`)).tree.sha;
+  const tree=[];
+  for(const f of files){const b=await gh('POST','git/blobs',{content:f.b64,encoding:'base64'});tree.push({path:f.path,mode:'100644',type:'blob',sha:b.sha})}
+  const jb=await gh('POST','git/blobs',{content:JSON.stringify(data,null,1),encoding:'utf-8'});
+  tree.push({path:'data.json',mode:'100644',type:'blob',sha:jb.sha});
+  try{const t=await gh('GET',`git/trees/${base}?recursive=1`);if(!t.truncated)(t.tree||[]).forEach(e=>{if(e.type==='blob'&&e.path.startsWith('images/')&&!keep.has(e.path))tree.push({path:e.path,mode:'100644',type:'blob',sha:null})})}catch(_){}
+  const nt=await gh('POST','git/trees',{base_tree:base,tree});
+  const nc=await gh('POST','git/commits',{message:'Update konten situs (panel admin)',tree:nt.sha,parents:[head]});
+  await gh('PATCH',`git/refs/heads/${encodeURIComponent(c.b)}`,{sha:nc.sha});
+  tmp.forEach((p,d)=>UP.set(d,p));dirty=false;stat('Tersimpan di GitHub. Situs diperbarui sekitar 1 menit lagi.'+lastPub())
+ }catch(e){S.updated=prev;stat(ghErr(e),'err')}finally{busy=false}}
+async function syncLatest(){
+ const c=ghCfg();if(!tok()||!c.o||!c.r)return;
+ try{const txt=await gh('GET',`contents/data.json?ref=${encodeURIComponent(c.b)}`,null,true);if(dirty)return;
+  const n=fill(JSON.parse(txt));if(!n.github.owner&&S.github.owner)n.github=S.github;S=n;renderSite();renderPanel();stat()}catch(_){}}
+const gm=(t,ok)=>{const e=$('#gherr');if(e){e.textContent=t;e.style.color=ok?'#2e7d32':''}};
+function tabGithub(){const c=ghCfg(),has=!!tok();
+ return `<p class="hint">Perubahan disimpan sebagai commit ke repositori GitHub Anda. GitHub Pages lalu memperbarui situs sekitar 1 menit kemudian.</p>${fT('github.owner','Pemilik (username atau organisasi)',{ph:c.o||'username'})}${fT('github.repo','Nama repositori',{ph:c.r||'aquanice'})}${fT('github.branch','Branch',{ph:'main'})}
+<div class="h4">Token akses</div><label class="f"><span>Token GitHub (fine-grained)</span><input type="password" id="ghtok" autocomplete="off" placeholder="${has?'Token tersimpan di perangkat ini':'github_pat_…'}"></label><div class="tb"><button class="ab sky" data-act="gtok">Simpan token</button><button class="ab" data-act="gtest">Uji koneksi</button>${has?'<button class="ab x" data-act="gdel">Hapus token</button>':''}</div><div class="err" id="gherr"></div>
+<p class="hint">Token hanya disimpan di browser perangkat ini, tidak masuk ke file maupun repositori. Buat di GitHub: Settings → Developer settings → Fine-grained tokens. Pilih hanya repositori ini dan izin Contents: Read and write.</p>`}
+let armT=null;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b||!admin)return;const a=b.dataset.act,l=b.dataset.l,i=+b.dataset.i;
+ if(a==='tab'){tab=b.dataset.t;renderPanel();$('#apb').scrollTop=0}
+ else if(a==='panel')document.body.classList.toggle('pn');
+ else if(a==='add'){const ar=G(l);ar.push(T[l.split('.').pop()]());if(l==='programs')OPEN.add('p'+(ar.length-1));if(l==='coaches')OPEN.add('c'+(ar.length-1));if(l==='order')OPEN.add('s'+(ar.length-1));changed();renderPanel()}
+ else if(a==='del'){if(!b.dataset.arm){b.dataset.arm='1';b.dataset.t0=b.textContent;b.textContent='Yakin?';setTimeout(()=>{if(b.isConnected){delete b.dataset.arm;b.textContent=b.dataset.t0}},3000);return}
+  G(l).splice(i,1);OPEN.clear();changed();renderPanel()}
+ else if(a==='mv'){const ar=G(l),j=i+Number(b.dataset.d);if(j<0||j>=ar.length)return;[ar[i],ar[j]]=[ar[j],ar[i]];OPEN.clear();changed();renderPanel()}
+ else if(a==='clr'){setPath(b.dataset.p,'');changed();renderPanel()}
+ else if(a==='reset'){S.theme={...DEFTHEME};changed();renderPanel()}
+ else if(a==='chpw')changePw();
+ else if(a==='gtok'){const v=$('#ghtok').value.trim();if(!v){gm('Tempel token terlebih dulu.');return}try{localStorage.setItem(GH_KEY,v)}catch(_){gm('Browser tidak mengizinkan penyimpanan token.');return}renderPanel();gm('Token disimpan di perangkat ini.',1);syncLatest()}
+ else if(a==='gdel'){try{localStorage.removeItem(GH_KEY)}catch(_){}renderPanel();gm('Token dihapus dari perangkat ini.',1)}
+ else if(a==='gtest'){gm('Memeriksa…');(async()=>{const c=ghCfg();if(!c.o||!c.r){gm('Isi pemilik dan nama repositori dulu.');return}if(!tok()){gm('Simpan token dulu.');return}
+  try{const r=await gh('GET','');await gh('GET',`git/ref/heads/${encodeURIComponent(c.b)}`);gm(r.permissions&&r.permissions.push===false?'Terhubung, tetapi token hanya bisa membaca.':'Terhubung. Siap menyimpan perubahan.',!(r.permissions&&r.permissions.push===false))}catch(e){gm(ghErr(e))}})()}
+ else if(a==='pub')doPublish();
+ else if(a==='out'){if(dirty&&!b.dataset.arm){b.dataset.arm='1';stat('Perubahan yang belum diterbitkan akan hilang. Klik Keluar sekali lagi untuk keluar.','err');setTimeout(()=>{delete b.dataset.arm},4000);return}
+  try{sessionStorage.removeItem('aq_admin')}catch(_){}dirty=false;location.reload()}});
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
+
+(async()=>{
+ try{const r=await fetch('data.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;S=fill(await r.json())}
+ catch(_){app.innerHTML='<div class="wrap" style="padding:60px 20px"><h2>Halaman belum bisa dimuat</h2><p class="sub">File data.json tidak ditemukan. Buka situs lewat GitHub Pages atau server lokal, bukan dengan klik dua kali file index.html.</p></div>';return}
+ renderSite();
+ try{if(S.admin.hash&&sessionStorage.getItem('aq_admin')===S.admin.hash)enterAdmin()}catch(_){}
+})();
+})();
+</script>
+</body></html>

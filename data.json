@@ -1,0 +1,227 @@
+{
+ "v": 2,
+ "title": "Aquanice – Les Renang",
+ "footer": "© Aquanice Les Renang",
+ "logo": "images/logo.png",
+ "team": "images/team.jpg",
+ "hero": {
+  "title": "Belajar renang yang aman dan menyenangkan.",
+  "text": "Kelas untuk anak, dewasa, dan calon pendaftar TNI/Polri, dengan pelatih yang mendampingi dari pengenalan air sampai lancar.",
+  "cta1": "Daftar lewat WhatsApp",
+  "cta2": "Lihat program"
+ },
+ "theme": {
+  "ink": "#0a2a6b",
+  "sky": "#12a8ea",
+  "soft": "#eaf6fd"
+ },
+ "order": [
+  {
+   "id": "program",
+   "on": true,
+   "nav": "Program",
+   "title": "Program Aquanice",
+   "sub": "Pilih kelas sesuai usia dan tujuanmu.",
+   "soft": false
+  },
+  {
+   "id": "coach",
+   "on": true,
+   "nav": "Coach",
+   "title": "Coach Aquanice",
+   "sub": "Tim pelatih yang mendampingi setiap sesi.",
+   "soft": true
+  },
+  {
+   "id": "docs",
+   "on": true,
+   "nav": "Dokumentasi",
+   "title": "Dokumentasi",
+   "sub": "Momen latihan para peserta Aquanice.",
+   "soft": true
+  },
+  {
+   "id": "rules",
+   "on": true,
+   "nav": "Aturan",
+   "title": "Aturan singkat",
+   "sub": "Supaya latihan aman dan nyaman untuk semua.",
+   "soft": false
+  },
+  {
+   "id": "daftar",
+   "on": true,
+   "nav": "Daftar",
+   "title": "Daftar sekarang",
+   "sub": "Isi data berikut, lalu kirim lewat WhatsApp.",
+   "soft": false
+  }
+ ],
+ "programs": [
+  {
+   "name": "Reguler Anak-anak",
+   "tag": "",
+   "description": "Program latihan renang reguler untuk anak-anak.",
+   "regLabel": "Reguler Anak-anak",
+   "special": false,
+   "packages": [
+    {
+     "label": "4 pertemuan",
+     "price": 150000,
+     "unit": ""
+    },
+    {
+     "label": "6 pertemuan",
+     "price": 200000,
+     "unit": ""
+    }
+   ],
+   "extras": [],
+   "note": "",
+   "cta": "Daftar Sekarang"
+  },
+  {
+   "name": "Private Anak",
+   "tag": "Di bawah 17 tahun",
+   "description": "Latihan renang private untuk peserta berusia di bawah 17 tahun.",
+   "regLabel": "Private Anak (<17 Tahun)",
+   "special": false,
+   "packages": [
+    {
+     "label": "1 pertemuan",
+     "price": 60000,
+     "unit": "per pertemuan"
+    }
+   ],
+   "extras": [],
+   "note": "",
+   "cta": "Daftar Sekarang"
+  },
+  {
+   "name": "Private Dewasa",
+   "tag": "17 tahun ke atas",
+   "description": "Latihan renang private untuk peserta berusia 17 tahun ke atas.",
+   "regLabel": "Private Dewasa (17+ Tahun)",
+   "special": false,
+   "packages": [
+    {
+     "label": "1 pertemuan",
+     "price": 60000,
+     "unit": "per pertemuan"
+    }
+   ],
+   "extras": [],
+   "note": "",
+   "cta": "Daftar Sekarang"
+  },
+  {
+   "name": "TNI / POLRI",
+   "tag": "",
+   "description": "Paket latihan jasmani dan renang untuk TNI/POLRI.",
+   "regLabel": "TNI / POLRI",
+   "special": true,
+   "packages": [
+    {
+     "label": "Paket mingguan",
+     "price": 200000,
+     "unit": "per minggu"
+    }
+   ],
+   "extras": [
+    {
+     "label": "Latihan Fisik / Binjas",
+     "value": "3×"
+    },
+    {
+     "label": "Latihan Renang",
+     "value": "2×"
+    },
+    {
+     "label": "Total / 1 minggu",
+     "value": "5×"
+    }
+   ],
+   "note": "Latihan jasmani dan renang masuk dalam program reguler bersama peserta paket lainnya.",
+   "cta": "Daftar Sekarang"
+  }
+ ],
+ "coaches": [
+  {
+   "img": "images/coach-1.jpg",
+   "name": "Azka Auliandra",
+   "role": "Coach Renang"
+  },
+  {
+   "img": "images/coach-2.jpg",
+   "name": "Hikmal Akbar",
+   "role": "Coach Fisik / Coach Renang"
+  },
+  {
+   "img": "images/coach-3.jpg",
+   "name": "Airlangga",
+   "role": "Coach Renang"
+  },
+  {
+   "img": "images/coach-4.jpg",
+   "name": "Indra Yusuf",
+   "role": "Coach Renang"
+  },
+  {
+   "img": "images/coach-5.jpg",
+   "name": "Nabile",
+   "role": "Coach Fisik & Renang / Life Guard"
+  },
+  {
+   "img": "images/coach-6.jpg",
+   "name": "Rafi",
+   "role": "Life Guard / Assist. Coach"
+  }
+ ],
+ "docs": [
+  {
+   "img": "images/doc-1.jpg",
+   "caption": "Latihan Fisik"
+  },
+  {
+   "img": "images/doc-2.jpg",
+   "caption": "Kelas private anak"
+  },
+  {
+   "img": "images/doc-3.jpg",
+   "caption": "Kelas reguler anak-anak"
+  },
+  {
+   "img": "images/doc-4.jpg",
+   "caption": "Kelas reguler anak-anak"
+  },
+  {
+   "img": "images/doc-5.jpg",
+   "caption": "Kelas reguler anak-anak"
+  }
+ ],
+ "rules": [
+  "Bilas sebelum masuk kolam; pakai pakaian dan topi renang.",
+  "Izin tidak hadir minimal beberapa jam sebelum sesi.",
+  "Pembayaran paket dilakukan di muka.",
+  "Anak kecil didampingi orang tua di area kolam.",
+  "Peserta sakit sebaiknya istirahat dulu.",
+  "Ikuti arahan pelatih dan lifeguard."
+ ],
+ "waNumber": "085876654767",
+ "contactText": "085876654767 (Azka) & @aquanice_swim (IG)",
+ "addr": "Kolam sekitar kota semarang & Lapangan unnes",
+ "reg": {
+  "button": "Daftar via WhatsApp",
+  "msg": "Halo Aquanice, saya ingin mendaftar."
+ },
+ "admin": {
+  "salt": "aq-7f3c91d2",
+  "hash": "b0322d49702c5469c34104ba9d1419cd2ff3f66ed00f432b9ec61b8762e6ad8e"
+ },
+ "updated": "",
+ "github": {
+  "owner": "",
+  "repo": "",
+  "branch": "main"
+ }
+}
